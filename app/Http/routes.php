@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'MainController@getYahoo',
+    'as' => 'main_page'
+]);
 
 Route::get('/weather' , [
     'uses' => 'MainController@getWeather',

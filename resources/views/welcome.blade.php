@@ -18,7 +18,7 @@
                 display: table;
                 font-weight: 100;
                 font-family: 'Tenor Sans';
-                background-image:url('../images/vilnius.jpg');
+                background-image:url('../images/vilnius.jpg'), url('images/vilnius.jpg');
                 background-size: cover;
             }
 
@@ -31,7 +31,7 @@
             .content {
                 text-align: center;
                 display: inline-block;
-                background-color: rgba(0,0,0, 0.5);
+                background-color: rgba(0,0,0, 0.6);
                 color:white;
             }
             
