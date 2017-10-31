@@ -26,3 +26,8 @@ Route::get('/yahoo' , [
     'uses' => 'MainController@getYahoo',
     'as' => 'getWeatherYah'
 ]);
+
+Route::get('/temp/{provider}', [
+    'uses' => 'MainController@getTemperature',
+    'as' => 'temperature'
+]);

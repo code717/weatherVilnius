@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Weather in Vilnius</title>
-
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Tenor+Sans' rel='stylesheet' type='text/css'>
 
@@ -66,13 +66,14 @@
   <div class="container-fluid" style="background-color:rgba(255,0,0,0.5);">
     
     <ul class="nav navbar-nav">
-      <li class="active">{!! link_to_route('getWeatherYah', 'Yahoo') !!}</li>
-      <li>{!! link_to_route('getWeather', 'OpenWeather') !!}</li>
+      <li class="active">{!! link_to_route('temperature', 'Yahoo', ['provider' => 'yahoo']) !!}</li>
+      <li>{!! link_to_route('temperature', 'OpenWeather', ['provider' => 'openWeather']) !!}</li>
       
     </ul>
   </div>
 </nav>
             <div class="content">
+                <!--<div class="text-center">@if(isset($imgUrl)) {{$imgUrl}}>@endif</div>-->
                 <div class="title">Šiuo metu temperatūra Vilniuje yra @if(isset($temp)){{$temp}}&#8451;  @endif</div>
                 <div>Duomenis iš {{ Html::link($link, $title, array('target'=>'_blank')) }}</div>
             </div>
